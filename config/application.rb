@@ -26,7 +26,7 @@ module BackLinks
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins '*'
+        origins 'https://5f2446f2a41913db068b218e--elated-heisenberg-6e8a4a.netlify.app/'
         resource '*', :headers => :any, :methods => [:get, :post, :options, :delete]
       end
     end
