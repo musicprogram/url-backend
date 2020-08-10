@@ -24,7 +24,7 @@ module BackLinks
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0 and config.autoloader = :classic
 
-    config.middleware.insert_before 0, Rack::Cors do
+    config.middleware.insert_before "ActionDispatch::Static", Rack::Cors do
       allow do
         origins 'https://elated-heisenberg-6e8a4a.netlify.app/'
         resource '*', :headers => :any, :methods => [:get, :post, :options, :delete]
